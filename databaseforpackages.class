@@ -1,0 +1,42 @@
+package com.example.guru.globetrottting;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+public class DbHelper extends SQLiteOpenHelper {
+    public static String DATABASE_NAME="registers";
+    public DbHelper(Context context, String name, SQLiteDatabase.CursorFactory
+            factory, int version) {
+        super(context,name, factory, version);
+    }
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        String qry = "create table if not exists booking( fname text, num text)";
+        db.execSQL(qry);
+    }
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    }
+    public void insertValues(String r, String n) {
+        ContentValues cv = new ContentValues();
+        cv.put("fname", r);
+        cv.put("num", n);
+        SQLiteDatabase db = getWritableDatabase();
+        db.insert("booking", null, cv);
+        db.close();
+    }
+    public String selectRows() {
+        String rows = "";
+        String qry="select * from booking";
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor c = db.rawQuery(qry, null);
+        while (c.moveToNext()) {
+            rows += c.getString(0) + " " + c.getString(1) +" ";
+            rows+= "\n";
+        }
+        c.close();
+        db.close();
+        return rows;
+    }
+}
