@@ -1,0 +1,231 @@
+package com.example.manisha.globetrottting;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
+public class mainpage extends AppCompatActivity {
+    ImageButton ib1,ib2,ib3,ib4;
+    TextView t1,t2;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_mainpage); Toast.makeText(getApplicationContext(),"Welcome",Toast.LENGTH_LONG).show();
+        ib1=(ImageButton)findViewById( R.id.ib1);
+        ib2=(ImageButton)findViewById( R.id.ib2);
+        ib3=(ImageButton)findViewById( R.id.ib3);
+        ib4=(ImageButton)findViewById( R.id.ib4);
+        t1=(TextView)findViewById(R.id.t1);
+        t2=(TextView)findViewById(R.id.t2);
+        ib1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String l="Price: ₹ 18,000Per Person\n" +
+                        "Duration: 4 Days / 3 Nights\n" +
+                        "\n" +
+                        "Experience a memorable holiday with this Bali tour package that is designed for all the busy bees looking for some adventure away from their routine life. Check out the detailed itinerary below for more information.\n" +
+                        "\n" +
+                        "Day-wise itinerary\n" +
+                        "\n" +
+                        "Day 1: Arrival in Bali\n" +
+                        "\n" +
+                        "    Arrive at Denpasar airport on your own  \n" +
+                        "    Meet the representative and get a transfer to the hotel\n" +
+                        "    Check-in and take some rest\n" +
+                        "    In the afternoon, visit popular Bali tourist places including the Monkey Forest, Mengwi Temple and Tanah Lot\n" +
+                        "    Return back to the hotel for the night\n" +
+                        "\n" +
+                        "Day 2: Sightseeing in Bali\n" +
+                        "\n" +
+                        "    Post breakfast, head out to explore the city\n" +
+                        "    Visit famous Bali tourist places including Taman Ayun Temple, Lake Bratan and Pura Luhur Batukaru Temple\n" +
+                        "    Later, explore Candi Kuning market, famous for fresh fruits and vegetables\n" +
+                        "    Return back to the hotel for the night\n" +
+                        "\n" +
+                        "Day 3: Elephant Safari and Adventure Sports\n" +
+                        "\n" +
+                        "    After breakfast, proceed for an exciting safari at the Elephant Safari Park\n" +
+                        "    Later, enjoy thrilling activities like white water rafting\n" +
+                        "    Return back to the hotel for the night\n" +
+                        "\n" +
+                        "Day 4: Departure\n" +
+                        "\n" +
+                        "    Post breakfast, get a transfer to the airport for your onward journey\n" +
+                        "\n" +
+                        "Inclusions\n" +
+                        "\n" +
+                        "    Accomodation\n" +
+                        "    Meals: breakfast\n" +
+                        "    Transfers\n" +
+                        "    Sightseeing\n" +
+                        "    Tour manager\n" +
+                        "    Travel insurance\n" +
+                        "\n" +
+                        "Exclusions\n" +
+                        "\n" +
+                        "    Fare: air\n" +
+                        "    All expenses of personal nature\n" +
+                        "    Anything not mentioned under inclusions\n";
+                Intent in=new Intent(mainpage.this,mount.class);
+                Bundle k=new Bundle();
+                k.putString("l",l+"");
+                in.putExtras(k);
+                startActivity(in);
+            }
+        });
+        ib2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String l="Price: ₹ 12,000Per Person\n" +
+                        "Duration: 5 Days / 4 Nights\n" +
+                        "\n" +
+                        "Set out for a trip to Kashmir and witness this beautiful destination at its best by opting for the following Kashmir tour package. Visit the prominent places of interest, take up boat rides, explore beautiful valleys and experience a stay in houseboats. Choose from the package options below.\n" +
+                        "\n" +
+                        "Package 1\n" +
+                        "\n" +
+                        "5D/4N in Kashmir (total price: ₹12,000 per person)\n" +
+                        "\n" +
+                        "Highlights\n" +
+                        "\n" +
+                        "    Experience staying in a houseboat\n" +
+                        "    Enjoy a shikara boat ride on Dal Lake\n" +
+                        "    Embark on an exciting excursion to Gulmarg\n" +
+                        "    Visit the beautiful Sonmarg\n" +
+                        "    Explore the prominent places of interest in Srinagar\n" +
+                        "\n" +
+                        "Hotels\n" +
+                        "\n" +
+                        "    Srinagar: Ash Vale/similar\n" +
+                        "    Houseboats: Peacock/Wangnoo\n" +
+                        "\n" +
+                        "Overview\n" +
+                        "\n" +
+                        "Day 1: Arrival in Srinagar\n" +
+                        "\n" +
+                        "Day 2: Srinagar to Gulmarg and back to Srinagar\n" +
+                        "\n" +
+                        "Day 3: Srinagar to Sonmarg and back to Srinagar\n" +
+                        "\n" +
+                        "Day 4: Sightseeing in Srinagar\n" +
+                        "\n" +
+                        "Day 5: Departure\n" +
+                        "\n" +
+                        "Inclusions: accommodation, meals, transfers, sightseeing\n" +
+                        "\n" +
+                        "Exclusions: air/train fare, lunch, all expenses of a personal nature, anything not mentioned in inclusions\n" +
+                        "\n" +
+                        "Package 2\n" +
+                        "\n" +
+                        "6D/5N in Kashmir (total price: ₹12,000 per person)\n" +
+                        "\n" +
+                        "Highlights\n" +
+                        "\n" +
+                        "    Spend a day in leisure at Boulevard Road\n" +
+                        "    Experience staying in a houseboat\n" +
+                        "    Embark on a full day excursion to Sonmarg\n" +
+                        "    Visit Pahalgam\n" +
+                        "    Explore Gulmarg\n" +
+                        "    Visit Nishat Garden, Shalimar Garden, ChashmeShahi and more\n" +
+                        "\n" +
+                        "Hotels\n" +
+                        "\n" +
+                        "    Srinagar: Triden resort/Lankar resorts/Ash Vale/Kay Zee\n" +
+                        "    Pahalgam: Grand Abdullah hotel/Hill Park/Lidder View/Bombay Palace\n" +
+                        "    Gulmarg: Apple Tree resort/Mama Palace/Green Park/Gulmarg inn\n" +
+                        "    Houseboats: Peacock/Wangnoo/New Sea Palace\n" +
+                        "\n" +
+                        "Overview\n" +
+                        "\n" +
+                        "Day 1: Arrival in Srinagar\n" +
+                        "\n" +
+                        "Day 2: Srinagar to Sonmarg and back to Srinagar\n" +
+                        "\n" +
+                        "Day 3: Srinagar to Pahalgam\n" +
+                        "\n" +
+                        "Day 4: Pahalgam to Gulmarg\n" +
+                        "\n" +
+                        "Day 5: Gulmarg to Srinagar\n" +
+                        "\n" +
+                        "Day 6: Departure\n" +
+                        "\n" +
+                        "Inclusions: accommodation, meals, transfers, sightseeing, all applicable taxes, driver’s allowance\n" +
+                        "\n" +
+                        "Exclusions: air/train fare, lunch, all expenses of a personal nature, anything not mentioned in inclusions";
+                Intent in=new Intent(mainpage.this,mount.class);
+                Bundle k=new Bundle();
+                k.putString("l",l+"");
+                in.putExtras(k);
+                startActivity(in);
+            }
+        });
+        ib3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String l="Price: ₹ 16,426Per Person\n" +
+                        "Duration: 5 Days / 4 Nights\n" +
+                        "\n" +
+                        "A stunning city of ultra modern architecture that flaunts skyscrapers and extravagant shopping malls, Dubai is a smart blend of the old and new. A favourite hub for luxury shopping, effervescent nightlife, space age architecture and artificial islands, the city has swiftly managed to transfigure itself from a desert encampment to a destination du-jour and is now a hot centre of business, sunshine, thrill and absolute fun! Check out the itinerary below and travel to Dubai!\n" +
+                        "\n" +
+                        "Day-wise Itinerary:\n" +
+                        "\n" +
+                        "Day 1: Arrival in Dubai\n" +
+                        "\n" +
+                        "    Take a flight and arrive at the airport in Dubai\n" +
+                        "    Meet the representative and get a transfer to your hotel\n" +
+                        "    On arrival, check in at the hotel\n" +
+                        "    Spend the rest of the day exploring on your own\n" +
+                        "\n" +
+                        "Day 2: Dubai City Tour & Dhow Cruise\n" +
+                        "\n" +
+                        "    Post breakfast, head out for a sightseeing tour\n" +
+                        "    Visit the Dubai Museum, Jumeirah Mosque, and other attractions\n" +
+                        "    In the afternoon, get a transfer to the port for the Marina Dhow Cruise\n" +
+                        "    Enjoy the sunset and see the skyscrapers as you sail \n" +
+                        "    Once you disembark, get a transfer to your Meena Bazar and enjoy dinner\n" +
+                        "    Later, return to your hotel for the night\n" +
+                        "\n" +
+                        "Day 3: Desert Safari & BBQ Dinner\n" +
+                        "\n" +
+                        "    Post breakfast, gear up for an exciting day\n" +
+                        "    Enjoy the desert safari in the afternoon\n" +
+                        "    Later, sit by a camp, eat dinner, and watch a folk dance performance\n" +
+                        "    Return to your hotel for the night\n" +
+                        "\n" +
+                        "Day 4: Dubai\n" +
+                        "\n" +
+                        "    Post breakfast, head out to explore on your own\n" +
+                        "    See some of Dubai's top attractions or go for a bit of shopping\n" +
+                        "    Later, return to your hotel for the night\n" +
+                        "\n" +
+                        "Day 5: Departure from Dubai\n" +
+                        "\n" +
+                        "    Post breakfast, check out from the hotel\n" +
+                        "    Get driven to the airport for your onward journey\n" +
+                        "\n" +
+                        "Inclusions:\n" +
+                        "\n" +
+                        "    Accommodation\n" +
+                        "    Transfers\n" +
+                        "    Sightseeing\n" +
+                        "    All Taxes\n" +
+                        "    Daily Breakfast\n" +
+                        "\n" +
+                        "Exclusions:\n" +
+                        "\n" +
+                        "    Return Airfare\n" +
+                        "    Visa\n" +
+                        "    Travel Insurance\n" +
+                        "    Meals\n" +
+                        "    GST\n" +
+                "    Personal Expenses\n";
+                Intent in=new Intent(mainpage.this,mount.class);
+                Bundle k=new Bundle();
+                k.putString("l",l+"");
+                in.putExtras(k);
+                startActivity(in);
+            }
+        });
+    }
+}
